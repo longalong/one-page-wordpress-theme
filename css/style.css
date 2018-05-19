@@ -1,0 +1,293 @@
+/*General Styles Start*/
+body{
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    overflow-x: hidden;
+}
+section{
+    height: auto;
+    padding: 0 50px;
+    padding-bottom: 50px;
+}
+header h1{
+    padding-top: 8vh;
+    text-transform: uppercase;
+    font-size: 1.6em;
+}
+header h2{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+figure h4{
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+figure h5{
+    font-size: 1em;
+    font-weight: 300;
+}
+hr{
+    border: 2px solid rgba(0,0,0,0.2);
+    width: 100px;
+}
+.btn{ 
+    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 2vh 4vw;
+    background-color: #FF785E;
+    color: #fff;
+    transition: all .1s ease;
+}
+.btn:hover{
+    background-color: #FF5789;
+    color: #fff;
+}
+/*General Styles End*/
+
+/*Navigation Start*/
+#nav{
+    background-color: transparent;
+}
+.navbar-light .navbar-nav .nav-link{
+    text-transform: uppercase;
+    padding: 1vh 2vw;
+    color: #fff;
+    border-radius: 5px;
+    transition: all .1s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    background-color: rgba(0,0,0,0.1);
+    color: #fff;
+}
+/*Navigation End*/
+
+/*Section Home Start*/
+#home{
+    background-color: #9247A8;
+    height: 100vh;
+}
+#home header{
+    padding: 20vh;
+}
+#home header h2{
+    font-weight: 400;
+    color: #fff;
+    font-size: 5vh;
+}
+/*Section Home End*/
+
+/*Section About Start*/
+#about{
+    background-color: #E6F0F6;
+    height: auto;
+    color: #444;
+}
+#about h2{
+    color: #444;
+}
+#about figure{
+    padding-bottom: 30px;
+}
+#about figure .image,
+#about figure .mask{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+    transition: all .1s ease;
+}
+#about figure .image{
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#about figure .mask{
+    background-color: #fff;
+    opacity: 0;
+}
+#about figure .image:hover{
+    background-size: 120%;
+}
+#about figure .image:hover > div.mask{
+    z-index: 1;
+    opacity: 0.4;
+}
+#about figure #img1{
+    background-image: url(../img/1.png);
+}
+#about figure #img2{
+    background-image: url(../img/3.png);
+}
+#about figure #img3{
+    background-image: url(../img/5.png);
+}
+#about figure #img4{
+    background-image: url(../img/8.png);
+}
+#about figure h5{
+    color: #24CCCE;
+}
+#about figure h6{
+    font-size: 1em;
+    font-weight: 300;
+    padding: 10px 30px;
+}
+#about figure .social-icons{
+	display: flex;
+    justify-content: center;
+}
+#about .social-icons .social-link{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 1.4em;
+    color: #fff;
+    background-color: #BED2DE;
+    margin: 0 5px;
+    transition: all .5s ease;
+}
+#about .social-icons .social-link:hover{
+    transform: rotate(360deg);
+    background-color: #24CCCE;
+}
+/*Section About End*/
+
+/*Section Work Start*/
+#work{
+    height: auto;
+    background-color: #fff;
+    color: #444;
+}
+#work h2{
+    color: #444;
+}
+#work .graph{
+    position: relative;
+    padding-bottom: 20px;
+}
+#work .circular-chart{
+    max-height: 200px;
+    animation: progress 1s ease-out forwards;
+}
+#work .circular-chart .circle-path{
+    stroke: #efefef;
+    fill: none;
+    stroke-width: 1.8;
+}
+#work .circular-chart .circle{
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+/*    animation: progress 1s ease-out forwards;*/
+}
+@keyframes progress{
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+#work .graph .percentage{
+    position: absolute;
+    top: 20%; left: 0;
+    font-size: 3em;
+    font-weight: 300;
+}
+#work .graph p{
+    text-transform: uppercase;
+    font-size: 1.4em;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+/*Section Work End*/
+
+/*Section Blog Start*/
+#blog{
+    color: white;
+    background-color: #F675A1;
+}
+#blog header h2{
+    color: #fff;
+}
+#blog figure{
+    padding-bottom: 30px;
+}
+#blog figure .quote-image,
+#blog figure .quote{
+    float: left;
+}
+#blog figure .quote-image img{
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+}
+#blog figure h1,
+#blog figure h2{
+    color: #fff;
+}
+#blog figure p{
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0;
+}
+#blog figure h5{
+    color: #FEDABB;
+}
+/*Section Blog End*/
+
+/*Section Contact Start*/
+#contact{
+    background-color: #4360A8;
+/*    height: 100vh;*/
+}
+#contact .contact-form .contact-form-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#contact input,
+#contact textarea{
+    background-color: #293B6F;
+    border: 0;
+    padding: 10px 20px;
+    color: #fff;
+}
+#contact input{
+    height: 35px;
+}
+#contact textarea{
+	height: 200px;
+    margin-bottom: 20px;
+}
+#contact .btn{
+	background-color: #00acc1;
+}
+#contact .btn:hover{
+	background-color: #F675A1;
+}
+/*Section Contact End*/
+
+/*Section Footer Start*/
+#footer{
+    height: auto;
+    padding-bottom: 0;
+    margin: 0;
+    background-color: #344B8C;
+}
+#footer .footer-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 5px 0;
+    border-radius: 5px;
+    transition: all .1s ease;
+}
+#footer .footer-link:hover{
+/*    background-color: rgba(0,0,0,0.4);*/
+    color: #7FDAC7;
+    text-decoration: underline;
+}
+/*Section Footer End*/
